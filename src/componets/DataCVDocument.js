@@ -4,8 +4,10 @@ export default {
     "created_at": "2017-06-14T22:11:27.180-07:00",
     "url": "aleximong", "url_suggestion": "aleximong",
     "privacy": "unlisted",
-    "sections": {
-        "profile": {
+    "sections": [
+        {
+            "name": "profile",
+            "type": "text_story",
             "content": {
                 "thumb": null,
                 "full_name": "Minh Dao Vu",
@@ -15,7 +17,9 @@ export default {
             },
             "label": null
         },
-        "positions": {
+        {
+            "name": "positions",
+            "type": "dated_story",
             "contents": [{
                 "title": "Architect/Developer",
                 "organization": "UPLEVO INC",
@@ -28,15 +32,19 @@ export default {
                 "organization_url": "",
                 "description": "\u003cul\u003e\n\u003cli\u003eTraining Technology\u003c/li\u003e\n\u003cli\u003eWork in the BSC team in the project that analize the business\u0026nbsp;criteria\u003c/li\u003e\n\u003c/ul\u003e", "start_date": "June 2013", "end_date": "2014"
             }],
-            "label": null
+            "label": 'WORK EXPERIENCE'
         },
-        "summary": {
-            "label": null,
+        {
+            "name": "summary",
+            "type": "text_story",
+            "label": 'SUMMARY',
             "content": {
                 "description": "\u003cp\u003e\u003cspan style=\"font-weight: 400;\"\u003eDeveloper with 3+ years of experience working directly for the CEO of Uplevo Inc and develop many products, a Startup company. Design platform online application for everyone Instantly create digital marketing or printing.\u003c/span\u003e\u003c/p\u003e"
             }
         },
-        "strengths": {
+        {
+            "name": "strengths",
+            "type": "strengths",
             "label": "Skills",
             "contents": [
                 { "name": "Frameworks", "description": "\u003cp\u003eReactjs, Backbone, Jquey, Nodejs, Meteor, Sailsjs, Wordpress, OctoberCMS, Coccos2dx\u003c/p\u003e", "level": "88" },
@@ -49,14 +57,9 @@ export default {
                 { "name": "Languages", "description": "\u003cp\u003e\u003cspan\u003eJavascript, Java, Nodejs, PHP, HTML, CSS, Java, XML,\u0026nbsp;\u003c/span\u003e\u003c/p\u003e", "level": 80 },
                 { "name": "Applications", "description": "\u003cp\u003e\u003cspan\u003eVisualstudio Code, Terminal, Vim, Rsync, Eclipse, NPM, Git\u003c/span\u003e\u003c/p\u003e", "level": "73" }]
         },
-        "text_story_FAv4q4Ge02": {
-            "content": {
-                "title": "",
-                "description": "\u003ctable\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd\u003e\n\u003cul\u003e\n\u003cli\u003eSuicide System\u003c/li\u003e\n\u003cli\u003eMail Services Integration\u003c/li\u003e\n\u003cli\u003eAnalytic Service\u0026nbsp;\u003cspan\u003eIntegration\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003eShopify Service \u003cspan\u003eIntegration\u003c/span\u003e\u0026nbsp;\u003c/li\u003e\n\u003cli\u003ePayment Service\u0026nbsp;\u003cspan\u003eIntegration\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003eAouth2 Service\u0026nbsp;\u003cspan\u003eIntegration\u003c/span\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/td\u003e\n\u003ctd\u003e\n\u003cul\u003e\n\u003cli\u003eDesign\u0026nbsp;Architecture\u003c/li\u003e\n\u003cli\u003eDevelop Webapplication\u003cspan data-reactid=\".0\"\u003e\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003eDevelopment Devops\u003c/li\u003e\n\u003cli\u003eDevelopment Microservice\u0026nbsp;\u003c/li\u003e\n\u003cli\u003eAnalytic User\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\n\u003c/table\u003e"
-            },
-            "label": "Core Competencies"
-        },
-        "degrees": {
+        {
+            "name": "degrees",
+            "type": "dated_story",
             "contents": [{
                 "title": "Software Engrineer",
                 "organization": "Ha Noi University of Science and Technology",
@@ -64,14 +67,8 @@ export default {
                 "description": "\u003cp\u003eCertificate: Good\u003c/p\u003e\n\u003cp\u003e\u003cspan data-reactid=\".0\"\u003e\u003c/span\u003e\u003c/p\u003e", "start_date": "2009", "end_date": "2014"
             }],
             "label": "Education"
-        },
-        "text_story": {
-            "content": {
-                "description": "\u003ctable\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align: center;\"\u003e\u003cstrong\u003eProduct\u003c/strong\u003e\u003c/td\u003e\n\u003ctd style=\"text-align: center;\"\u003e\u003cstrong\u003eBrief\u003c/strong\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003ca href=\"http://uplevo.com\" target=\"_blank\" rel=\"nofollow\"\u003eUplevo\u003c/a\u003e\u003c/td\u003e\n\u003ctd style=\"padding-left: 60px;\"\u003eMain portal products\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003ca href=\"http://uplevo.com/logo-design\" target=\"_blank\" rel=\"nofollow\"\u003eLogo Skectch\u003c/a\u003e\u003c/td\u003e\n\u003ctd style=\"padding-left: 60px;\"\u003eTool Sketch Logo online\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003ca href=\"http://uplevo.com/some-post\" target=\"_blank\" rel=\"nofollow\"\u003eSomepost\u003c/a\u003e\u003c/td\u003e\n\u003ctd style=\"padding-left: 60px;\"\u003eApp create tempalte facebook marketing\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003ca href=\"https://brandgos.com\" target=\"_blank\" rel=\"nofollow\"\u003eBrandgos\u003c/a\u003e\u003c/td\u003e\n\u003ctd style=\"padding-left: 60px;\"\u003ePlatform brand for designer\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003ca href=\"https://designtool.co\" target=\"_blank\" rel=\"nofollow\"\u003eDesigntool\u003c/a\u003e\u003c/td\u003e\n\u003ctd style=\"padding-left: 60px;\"\u003eApp support about image for mentch\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003ca href=\"http://dizen.vn\" target=\"_blank\" rel=\"nofollow\"\u003eDizen\u003c/a\u003e\u003c/td\u003e\n\u003ctd style=\"padding-left: 60px;\"\u003eWebsite Company\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\n\u003c/table\u003e"
-            },
-            "label": "My Products"
-        }
-    },
+        }]
+    ,
 
     "main_order": [
         "summary",

@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700);
 .css-crop {
   width: 100%;
   height: 0;
@@ -241,13 +240,13 @@
 .cv-container a[href] {
   color: #428bca;
 }
-.cv-container a[href] [data-bind=organization] {
+.cv-container a[href] [data-field=organization] {
   color: #428bca;
 }
-.cv-container [data-bind=organization_url] {
+.cv-container [data-field=organization_url] {
   display: block;
 }
-.cv-container [data-bind=end_date]:before {
+.cv-container [data-field=end_date]:before {
   content: ' - ';
 }
 .cv-container .add-section {

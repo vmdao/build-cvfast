@@ -104,7 +104,7 @@ export default {
     },
     templates: [
         {
-            "type": "template",
+            "type": "section",
             "props": { "id": "dated_story" },
             "children": [
                 {
@@ -112,10 +112,14 @@ export default {
                     "props": {},
                     "children": [{
                         "type": "h3",
-                        "props": { "className": "header-text", "data-field": "label" },
+                        "props": {
+                            "className": "header-text",
+                            "data-field": "label"
+                        },
                         "children": []
                     }]
-                }, {
+                },
+                {
                     "type": "article",
                     "props": { "data-field": "contents" },
                     "children": [
@@ -166,7 +170,7 @@ export default {
                 }
             ]
         }, {
-            "type": "template", "props": { "id": "strengths" },
+            "type": "section", "props": { "id": "strengths" },
             "children": [
                 {
                     "type": "header", "props": {},
@@ -176,19 +180,71 @@ export default {
                             "children": []
                         }]
                 },
-                { "type": "article", "props": { "className": "competency", "data-field": "contents" }, "children": [{ "type": "div", "props": { "className": "article-body competency" }, "children": [{ "type": "div", "props": { "data-field": "level" }, "children": [] }, { "type": "h6", "props": { "data-field": "name" }, "children": [] }, { "type": "p", "props": { "className": "competency-description", "data-field": "description" }, "children": [] }] }, { "type": "div", "props": { "className": "clearfix" }, "children": [] }] }]
+                {
+                    "type": "article",
+                    "props": {
+                        "className": "competency", "data-field": "contents"
+                    },
+                    "children": [
+                        {
+                            "type": "div",
+                            "props": { "className": "article-body competency" },
+                            "children": [
+                                {
+                                    "type": "div",
+                                    "props": { "data-field": "level" },
+                                    "children": []
+                                }, {
+                                    "type": "h6", "props":
+                                    { "data-field": "name" }, "children": []
+                                }, {
+                                    "type": "p",
+                                    "props": {
+                                        "className": "competency-description",
+                                        "data-field": "description"
+                                    }, "children": []
+                                }]
+                        },
+                        {
+                            "type": "div",
+                            "props": { "className": "clearfix" }, "children": []
+                        }
+                    ]
+                }]
         }, {
-            "type": "template", "props": { "id": "portfolio" },
-            "children": [{
-                "type": "header", "props": {},
-                "children": [{ "type": "h3", "props": { "className": "header-text", "data-field": "label" }, "children": [] }]
-            },
-            {
-                "type": "article", "props": { "className": "portfolio", "data-field": "content" },
-                "children": [{ "type": "div", "props": { "data-field": "description" }, "children": [{ "type": "p", "props": {}, "children": ["PortfolioDescription"] }] }, { "type": "div", "props": { "className": "row gallery" }, "children": [{ "type": "div", "props": { "className": "asset col-sm-4", "data-field": "assets" }, "children": [{ "type": "a", "props": { "className": "asset-thumb", "data-field": "file_url", "target": "_blank" }, "children": [{ "type": "div", "props": { "className": "asset-overlay" }, "children": [] }, { "type": "div", "props": { "className": "css-crop bg-cover" }, "children": [] }] }, { "type": "div", "props": { "target": "_blank", "rel": "nofollow", "data-field": "link_url" }, "children": [{ "type": "label", "props": { "className": "text-center ellipsis", "data-field": "title" }, "children": [] }] }] }] }]
-            }]
+            "type": "section", "props": { "id": "portfolio" },
+            "children": [
+                {
+                    "type": "header", "props": {},
+                    "children": [{ "type": "h3", "props": { "className": "header-text", "data-field": "label" }, "children": [] }]
+                },
+                {
+                    "type": "article",
+                    "props": { "className": "portfolio", "data-field": "content" },
+                    "children": [
+                        {
+                            "type": "div",
+                            "props": { "data-field": "description" },
+                            "children": [{
+                                "type": "p",
+                                "props": {},
+                                "children": ["PortfolioDescription"]
+                            }]
+                        },
+                        {
+                            "type": "div",
+                            "props": { "className": "row gallery" },
+                            "children": [{
+                                "type": "div",
+                                "props": { "className": "asset col-sm-4", "data-field": "assets" },
+                                "children": [{
+                                    "type": "a", "props": { "className": "asset-thumb", "data-field": "file_url", "target": "_blank" }, "children": [{ "type": "div", "props": { "className": "asset-overlay" }, "children": [] }, { "type": "div", "props": { "className": "css-crop bg-cover" }, "children": [] }]
+                                }, { "type": "div", "props": { "target": "_blank", "rel": "nofollow", "data-field": "link_url" }, "children": [{ "type": "label", "props": { "className": "text-center ellipsis", "data-field": "title" }, "children": [] }] }]
+                            }]
+                        }]
+                }]
         }, {
-            "type": "template", "props": { "id": "text_story" },
+            "type": "section", "props": { "id": "text_story" },
             "children": [{
                 "type": "header", "props": {},
                 "children": [{ "type": "h3", "props": { "className": "header-text", "data-field": "label" }, "children": [] }]
@@ -200,7 +256,7 @@ export default {
                 }]
             }]
         }, {
-            "type": "template", "props": { "id": "chart" },
+            "type": "section", "props": { "id": "chart" },
             "children": [
                 {
                     "type": "header", "props": {},
