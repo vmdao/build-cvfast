@@ -15,7 +15,10 @@
     "html-to-react": "^1.2.11",
     "immutable": "^3.8.1",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-contenteditable": "^2.0.4",
+    "react-dom": "^15.6.1",
+    "react-helmet": "^5.2.0",
+    "react-tinymce": "^0.6.0"
   },
   "scripts": {
     "start": "react-scripts start",

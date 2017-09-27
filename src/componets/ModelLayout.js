@@ -59,9 +59,8 @@ export default class ModelLayout {
         let layout = null;
         this.data.forEach(d => {
             if (d.name === 'profile') {
-                const modelTemplate = new ModelTemplate('hello', this.layout, d)
+                const modelTemplate = new ModelTemplate('profile', this.layout, d)
                 layout = modelTemplate.layoutTemplate
-                // this.deepFillDataToTemplate(modelTemplate.layoutTemplate)
             }
         })
 
@@ -71,8 +70,11 @@ export default class ModelLayout {
     getLayoutSections() {
         return this.data.map(d => {
             const template = this.findTemplate(d.type);
-            const modelTemplate = new ModelTemplate('hello', template, d)
-            return modelTemplate.layoutTemplate;
+            if (template) {
+                const modelTemplate = new ModelTemplate('infomation', template, d);
+                modelTemplate.addEditor();
+                return modelTemplate.layoutTemplate;
+            }
         })
     }
 

@@ -10,12 +10,12 @@ export default class ModelTemplate {
             console.log('error clone')
             this.layoutTemplate = {}
         }
-
         this.fillDataToTemplate(this.data)
     }
 
     setContentTemplate(template) {
         this.contentTemplate = this.scanContentTemplate(template, ['contents', 'content'])
+
     }
 
     getContentTemplate() {
@@ -44,13 +44,20 @@ export default class ModelTemplate {
         return null;
     }
 
+    createContentEditable(str) {
+        return str
+    }
+
     fillDataToTemplate(data) {
         // setClasname
-        this.layoutTemplate.props = { className: data.type }
+        const id = this.layoutTemplate.props.id;
+        if (typeof id === 'string') {
+            this.layoutTemplate.props = { className: data.type }
+        }
         // set Label
         const label = this.scanContentTemplate(this.layoutTemplate, ['label']);
         if (label) {
-            label.content = data.label;
+            label.content = this.createContentEditable(data.label);
         }
 
         // set Content
@@ -58,13 +65,24 @@ export default class ModelTemplate {
 
             const { content } = data;
 
-            for (var key in content) {
+            for (let key in content) {
                 if (content.hasOwnProperty(key)) {
-                    var element = this.scanContentTemplate(this.layoutTemplate, [key])
+                    let element = this.scanContentTemplate(this.layoutTemplate, [key])
                     if (element === null) {
                         continue
                     }
-                    element.content = content[key]
+
+                    let t = this.createContentEditable(content[key]);
+                    if (Array.isArray(t)) {
+                        t = t[0]
+                    }
+
+                    if (key === 'thumb' && t !== null) {
+                        element.type = 'img';
+                        element.props.src = t;
+                    } else {
+                        element.content = t;
+                    }
                 }
             }
 
@@ -84,7 +102,8 @@ export default class ModelTemplate {
                         if (element === null) {
                             continue
                         }
-                        element.content = content[key]
+
+                        element.content = this.createContentEditable(content[key]);
                         // console.log('element', element)
 
                     }
@@ -105,5 +124,43 @@ export default class ModelTemplate {
         })
     }
 
+    addEditor() {
+        const editor = {
+            "type": "div",
+            "props": {
+                "className": "edit-btn edit-section hidden-xs hidden-sm"
+            },
+            children: [{
+                "type": "div",
+                "props": {
+                    "className": "edit-btn__item-container"
+                },
+                children: [{
+                    "type": "a",
+                    "props": {
+                        "className": "edit-btn__item arrow_up sort-up"
+                    },
+                    children: []
 
+                },
+                {
+                    "type": "a",
+                    "props": {
+                        "className": "edit-btn__item arrow_down sort-down"
+                    },
+                    children: []
+
+                }, {
+                    "type": "a",
+                    "props": {
+                        "className": "edit-btn__item icon_trash_alt"
+                    },
+                    children: []
+
+                }]
+            }]
+        }
+        this.layoutTemplate.children.unshift(editor)
+
+    }
 }

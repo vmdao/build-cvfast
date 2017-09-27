@@ -178,14 +178,14 @@
   display: block;
   clear: both;
 }
-.cv-container .main section:first-child .edit-section .sort-up,
+/* .cv-container .main section:first-child .edit-section .sort-up,
 .cv-container .cv-content section:first-child .edit-section .sort-up {
   display: none;
 }
 .cv-container .main section:last-of-type .edit-section .sort-down,
 .cv-container .cv-content section:last-of-type .edit-section .sort-down {
   display: none;
-}
+} */
 .cv-container #profile .edit-section {
   display: none;
 }
