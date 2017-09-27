@@ -4,13 +4,7 @@ export default class Dial extends Component {
 
     render() {
         let { level } = this.props
-        if (level) {
-
-            level = parseInt(level)
-        } else {
-            level = 0
-        }
-
+        level = level ? parseInt(level, 10) : 0
         return (
             <div className="competency-dial" data-competency={level}>
                 <div className="competency-level">{level / 10}</div>

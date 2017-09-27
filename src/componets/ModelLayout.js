@@ -75,6 +75,7 @@ export default class ModelLayout {
                 modelTemplate.addEditor();
                 return modelTemplate.layoutTemplate;
             }
+            return template;
         })
     }
 

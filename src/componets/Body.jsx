@@ -22,7 +22,7 @@ class Body extends Component {
     createElement(element) {
 
         if (typeof element === 'undefined' || !element) return;
-        console.log('eeeee', element)
+
         element.props.key = this.key++;
 
         const field = element.props['data-field'];
@@ -33,6 +33,7 @@ class Body extends Component {
                 case 'bar': return <Bar level={element.content} key={element.props.key} />
                 case 'list': return <List level={element.content} key={element.props.key} />
                 case 'dial': return <Dial level={element.content} key={element.props.key} />
+                default: return <Bar level={element.content} key={element.props.key} />
             }
         }
 
